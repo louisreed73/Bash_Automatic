@@ -1,0 +1,649 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+--------------------------------------
+--------------------------------------
+
+@font-face {
+  font-family: 'Montserrat-Italic';
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+------------------------------------
+------------------------------------
+
+positivos de mayor resolucion (+ Grande) a menor resolución (+ Pequeño)
+
+
+  font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+
++Mas pequeña conforme el viewport es más pequeño:
+
+font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+
++Mas grande conforme el viewport es más pequeño:
+
+font-size: calc(26px - (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+
+
+
+
+En %: Ejemplo
+
+
+calc(12% + (24 - 12) * ((100vw - 300px) / (1600 - 300)))
+
+
+---------------------
+---------------------
+
+QUITAR ARROWS por default en Select TAGS:
+
+select::-ms-expand {
+   display: none;
+}
+
+
+-------------------
+-------------------
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  /* IE10+ specific styles go here */  
+
+
+
+
+}  
+
+
+-------------------
+-------------------
+
+@supports (-ms-ime-align: auto) {
+
+        /* IEDEGE+ specific styles go here */
+    
+  }
+
+
+-----------------------------------
+-----------------------------------
+****Arreglar word-wrap en Mozilla
+
+*Colocar estas reglas en el primer div anterior:
+
+    word-break: break-all;
+    word-wrap: break-word;
+
+
+
+
+----------------------------
+------------------------------
+
+
+$(window).resize(function() {
+
+if (innerWidth>=771) {
+
+$("div.body-page span.remarkable").css({color:"red"})
+
+}
+
+else {
+
+$("div.body-page span.remarkable").css({color:"blue"})
+
+}
+
+
+
+
+
+
+
+})
+
+
+-----------------------------
+------------------------------
+
+.parent {
+  font-size: 250px; // height of container
+  height: 1em;
+}
+
+.child {
+  height: 100%;
+  width: 1em; // 100% of height
+}
+
+
+--------------------------------------
+--------------------------------------
+
+FLOW
+
+
+* > * + *, * > * {
+    padding-bottom: 8px !important;
+}
+
+
+----------------------------------------
+-----------------------------------------
+
+INTERSECTION OBSERVER
+
+function handler(entries, observer) {
+  for (entry of entries) {
+    console.log(entry);
+
+   
+
+    if (entry.isIntersecting) {
+      console.log('Estoy entrando!!!')
+    } else {
+      console.log('Estoy saliendo!!!')
+    }
+  }
+}
+
+/* By default, invokes the handler whenever:
+   1. Any part of the target enters the viewport
+   2. The last part of the target leaves the viewport */
+
+var observer1 = new IntersectionObserver(handler);
+observer1.observe(document.getElementById("bloqueHome02DerTitulo"));
+
+-------------------------------------
+-------------------------------------
+
+VIDEOS RESPONSIVE
+
+.contenedorVideo {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+    background: black;
+    position: relative;
+}
+
+YOUTUBE IFRAME
+
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+
+-----------------------------------------
+Script chivato de elemento overflow BODY.
+-----------------------------------------
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+
+
+-----------------------------------------
+Script buscar texto que matches y añadirle clase en JQUERY.
+-----------------------------------------
+
+
+var diaHoy=new Date().getDate();
+
+
+
+
+	$('td').each(function(k,v){
+
+		var re = new RegExp("\\b"+diaHoy+"\\b","g");
+
+		if($(this).text().match(re)) {
+			// do something
+			$(this).addClass('hoy');
+
+		   
+		}
+	});
+
+
+-------------------------------------
+-------------------------------------
+
+
+/* ----------------------------------------
+INPUT RANGE UNSTYLED
+----------------------------------------- */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+/* ----------------------------------------
+INPUT RANGE UNSTYLED FIN
+----------------------------------------- */
+
+
+
+/* ----------------------------------------
+INPUT RANGE THUMB CUSTOM
+----------------------------------------- */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    margin-top: -6px;
+    border:none;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    margin-top: -6px;
+  }
+
+
+/* ----------------------------------------
+INPUT RANGE CUSTOM THUMB FIN
+----------------------------------------- */
+
+
+
+/* ----------------------------------------
+INPUT RANGE TRACK CUSTOM
+----------------------------------------- */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+   
+    background: #3071a9;
+    border-radius: 6px;
+    
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+   
+    background: #3071a9;
+    border-radius: 6px;
+    
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    
+   
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    
+   
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+
+
+/* ----------------------------------------
+INPUT RANGE TRACK FIN
+----------------------------------------- */
+
+
+
+-----------------------------------------------
+JAVASCRIPT INPUT RANGE CONSOLE JQUERY
+-----------------------------------------------
+
+$(document).on('input change', '#formControlRange', function() {
+    console.log( $(this).val() );
+});
+
+------------------------------------------------
+------------------------------------------------
+
+
+elemento::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height:20px;
+    background: white;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+
+------------------------------------
+-----------------------------------------
+
+basic bootstrap import
+
+//Basico 2400 lineas
+@import 'scss/bootstrap-reboot.scss';
+@import 'scss/bootstrap-grid.scss';
+
+
+
+//Basico + spacing utilities  3700 lineas
+
+@import 'scss/bootstrap-reboot.scss';
+@import 'scss/bootstrap-grid.scss';
+@import 'scss/utilities/_spacing.scss';
+
+
+
+------------------------------------------
+------------------------------------------
+
+circulo de spans
+
+span.circle_Corporate {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #d7192d;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@font-face { font-family: 'Montserrat-Regular'; src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg'); font-weight: normal; font-style: normal; } 
+
+@font-face { font-family: 'Montserrat-Bold'; src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg'); font-weight: normal; font-style: normal; } 
+
+
+
+$Mr:'Montserrat-Regular', Arial, sans-serif;
+
+$Mb:'Montserrat-Bold', Arial, sans-serif;
+
+----------------------------------------------------------------
+
+mkdir 
+rm 
+ls
+clear
+type nul > texto.txt
+del texto.txt
+
+mkdir src, src/css, src/js, src/fonts
+
+type nul > index.html, nul > css/estilo.css
+
+
+
+
+-----------------------------------------------------------------
+
+
+npm i -D webpack webpack-cli html-webpack-plugin mini-css-extract-plugin url-loader style-loader css-loader sass-loader node-sass autoprefixer postcss-loader
+
+npm i -S bootstrap@latest
+
+----------------------------------------------------------------
+
+
+const path=require('path');
+const HtmlWebpackPlugin=require('html-webpack-plugin');
+const MiniCssExtractPlugin=require('mini-css-extract-plugin');
+const webpack = require("webpack");
+const autoprefixer = require("autoprefixer");
+
+
+module.exports={
+    mode:"production",
+    entry:'./src/js/index.js',
+    output: {
+        path: path.resolve(__dirname,'build/js'),
+        filename:'bundle.js'
+    },
+    plugins:[
+        new MiniCssExtractPlugin({
+            filename:'../css/estilo.css'
+        }),
+        new HtmlWebpackPlugin({
+            template:'./src/index.html',
+            filename: '../index.html',
+/*             minify: {//para minify en production mode, lo cual inserta el default de minify en true
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true
+            } */
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer()
+                ]
+            }
+        })
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.(sa|c|sc)ss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader','postcss-loader','sass-loader'],
+                // ,'sass-loader'
+            },
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg|jpg|jpe?g)$/,
+                 use: ['url-loader?limit=100000'] },
+                 {
+                     test: /\.(jpe?g|svg|gif|png)$/,
+                     use: [
+                         {
+                         loader:'file-loader',
+                         options: {
+                             name: '[name].[ext]',
+                             outputPath: '../images/',
+                             useRelativePath: true
+                         }
+                        
+                     }
+                    ]
+                 },
+            {
+                test: /\.(gif|png|jpe?g|svg)$/i,
+                use: [
+
+                {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65
+                            },
+                            // optipng.enabled: false will disable optipng
+                            optipng: {
+                                enabled: false,
+                            },
+                            pngquant: {
+                                quality: '65-90',
+                                speed: 4
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            // the webp option will enable WEBP
+                            webp: {
+                                quality: 75
+                            }
+                        }
+                    }, 
+                ],
+            }
+        ]
+    },
+    watch:true,
+}
+
+
+---------------------------------------------
+
+Bootstrapin WEbpack
+
+
+
+estilo.scss:
+
+@import "~bootstrap/scss/bootstrap";
+
+
+--------------------------------------------------
+
+{
+  "name": "pruebas002",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack --progress"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "lo que me salga del pijo",
+  "devDependencies": {
+    "autoprefixer": "^9.6.0",
+    "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.1",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
+
+
+
+------------------------------------------------------
+
+let regex = new RegExp(`^${text}`, 'gi');
+
+
+------------------------------------------------------

@@ -1,0 +1,1361 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+VECTORITCPSS: Lademarras1914
+
+formacio.lsancheza@vectoritcgroup.com
+passw:  h%3vN#W4
+
+--------------------------------------
+--------------------------------------
+
+
+TYPESCRIPT ISSUE resolving modules as class-transformer:
+
+import {plainToClass} from "class-transformer";
+
+in ts.config.json add:
+
+"moduleResolution":"node"
+
+
+---------------------------------------
+---------------------------------------
+
+
+
+
+Append
+
+$ for i in home guitars bass contact;do echo -e "<div page>\n<p>${i} Works!</p>\n</div>" >> src/app/pages/${i}/${i}.component.html; done
+
+OVerwrite
+
+$ for i in home guitars bass contact;do echo -e "<div page>\n<p>${i} Works!</p>\n</div>" >| src/app/pages/${i}/${i}.component.html; done
+
+for i in auth home guitars bass;do echo -e "<div page>\n<p>${i} works!!</p>\n</div>" >| src/app/pages/${i}/${i}.component.ts --skipTests=true;done
+
+--------------------------------------
+--------------------------------------
+
+replace string without copy of the file -i  in this case, Capital insensitive --> gi as regex
+
+sed -i "s/palabraACambiar/palabraFinal/gi" src/path/to/file
+
+
+---------------------------------------
+---------------------------------------
+
+ng g c layouts/layout1 --skipTests=true && for i in header footer form;do ng g c components/${i} --skipTests=true;done && for i in home guitars bass contact;do ng g c pages/${i} --skipTests=true;done
+
+---------------------------------------
+---------------------------------------
+
+for i in Home Guitars Bass Contact;do echo -e "<div page>\n<p>${i} Works</p>\n</div>" >| src/app/pages/${i}/${i}.component.html;done
+
+---------------------------------------
+---------------------------------------
+
+for i in guitars bass contact;do cp src/app/pages/home/home.module.ts src/app/pages/${i}/${i}.module.ts;done
+
+---------------------------------------
+---------------------------------------
+
+nest g module zapatilla && nest g controller zapatilla --no-spec && nest g service zapatilla --no-spec && for i in dtos repositories entities;do mkdir src/zapatilla/${i};done
+
+---------------------------------------
+---------------------------------------
+
+
+touch src/zapatilla/dtos/zapatilla.dto.ts && touch src/zapatilla/entities/zapatilla.entity.ts && touch src/zapatilla/repositories/zapatilla.repository.ts
+
+---------------------------------------
+---------------------------------------
+
+$ mkdir -p carp1 carp2/{carp_1,carp_2/{carp__1,carp__2},carp_3} carp3
+
+---------------------------------------
+---------------------------------------
+setting.json
+
+ "terminal.integrated.shell.windows": "C:\\cygwin64\\bin\\bash.exe",
+
+  "terminal.integrated.env.windows": { "CHERE_INVOKING": "1" },
+  "terminal.integrated.shellArgs.windows": [ "--login" ],
+
+
+
+curl --ssl-reqd \
+  --url 'smtps://smtp.gmail.com:465' \
+  --user 'luis.sa1973@gmail.com:lademarras' \
+  --mail-from 'luis.sa1973@gmail.com' \
+  --mail-rcpt 'luis.sa1973@gmail.com' \
+  --upload-file mail.txt
+
+
+---------------------------------------
+----------------------------------------
+
+
+  "main": "public/app.js",
+  "scripts": {
+    "_n": "nodemon --ext js,css,html -w public",
+    "tsc":"tsc -w",
+    "start":"npm-run-all --parallel _n tsc"
+  },
+
+---------------------------------------
+----------------------------------------
+
+
+
+node -p "JSON.stringify({...require('./package.json'),scripts:{_nd:'nodemon --ext js,css,html -w public', tsc:'tsc -w', start:'npm-run-all --parallel _nd tsc'}, main:'public/app.js'}, null, 2)" > package2.json && mv package2.json package.json
+
+---------------------------------------
+----------------------------------------
+
+
+node -p "JSON.stringify({...require('./package.json'),
+scripts:{start:'nodemon --ext js,css,html -w public'}, 
+main:'public/app.js'},
+ null, 2)" > package2.json && mv package2.json package.json
+
+---------------------------------------
+----------------------------------------
+
+node -p "JSON.stringify({...require('./package.json'),
+scripts:{_nd:'nodemon --ext js,css,html -w public', 
+tsc:'tsc -w', 
+start:'npm-run-all --parallel _nd tsc'}, 
+main:'public/app.js'},
+ null, 2)" > package2.json && mv package2.json package.json
+
+
+**Hacer JSON desde file.txt
+
+<./public/bromas.txt jq -Rs '{array:split("\n")|map(split(":")|{broma:.[0]}?)}'
+
+<./public/bromas.txt jq -Rs '{bromas:split("\n")|map(split(":")|{value:.[0]}?)}' > _data.json
+
+
+***Ir al escritorio
+
+
+SET ENVIRONMENT VARIABLES:
+
+sysmd.cpl
+
+/cygdrive/c/Users/louis.DESKTOP-JSH77VK/Desktop
+
+
+---------------------------------------
+----------------------------------------
+
+
+find . -name "node_modules" -type d -prune | xargs du -chs
+
+
+
+find . -name "node_modules" -type d -prune -exec rm -rf '{}' +  ///Eliminar
+
+
+---------------------------------------
+----------------------------------------
+
+find \( -not -name "bas.sh" -a -not -name "bas2.sh" \) -exec rm -rf {} +
+
+find -not -name "expressTypescript.sh" -exec rm -rf {} +
+
+
+---------------------------------------
+----------------------------------------
+
+
+
+find . -not -name "*.sh" -exec rm -rf '{}' + ///Eliminar todos los archivos que no terminan en .sh
+
+find . -type f \( -not -name "*.sh" -a -not -name "*.json" \) //Eliminar todos los archivos que no terminan en .sh ni json
+
+datos=();readarray -d '' datos < <(find . -name "*.html" -print0); echo ${datos[*]} // meter find data dentro de array
+ 
+echo ${#datos[@]}   ///  Length of array
+
+datos=();
+
+datos[${#datos[@]}]="New Element"  //  Introducir al final del array nuevo string
+
+
+
+find . -maxdepth 2 -type d -name "node_modules" -path /Javascript-OOP-Course-23 -prune -o
+
+--------------------------------------
+---------------------------------------
+
+
+jq '[.[] | {id:.id,nombre:.name,imagenes:.images}]' bajos.json > acercandome.json
+
+
+curl -s "http://api.icndb.com/jokes/random/10" | jq '.value[] | {id:.id,broma:.joke}'
+
+curl -s "http://api.icndb.com/jokes/random/10" | jq '[.value[] | {id:.id,broma:.joke}]'
+
+
+---------------------------------------
+---------------------------------------
+
+carpetas=(dtos entitites repositories)
+nombre=(dto entity repository)
+
+for i in ${!carpetas[*]};do touch src/boli/${carpetas[${i}]}/boli.${nombre[${i}]}.ts;done
+
+
+---------------------------------------
+---------------------------------------
+
+@font-face {
+  font-family: 'Montserrat-Italic';
+  src: url("../fonts/Montserrat-Italic.woff2") format("woff2"), url("../fonts/Montserrat-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url("../fonts/Montserrat-Light.woff2") format("woff2"), url("../fonts/Montserrat-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"), url("../fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url("../fonts/Montserrat-ExtraLight.woff2") format("woff2"), url("../fonts/Montserrat-ExtraLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"), url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"), url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"), url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+------------------------------------
+------------------------------------
+
+cp -r $Angular/pages  $Angular/layouts $Angular/components $Angular/app-routing.module.ts $Angular/app.component.html ./src/app && cp $Angular/index.html $Angular/styles.scss ./src
+
+
+------------------------------------
+------------------------------------
+
+
+
+box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+font-family: 'Montserrat', sans-serif;
+
+:root {
+    font-size:70%;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat',
+    sans-serif;
+}
+
+[page] {
+    padding:3rem;
+}
+
+li:active,
+li:focus {
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+
+}
+
+
+------------------------------------
+ROUTES	
+------------------------------------
+
+const appRoutes:Routes=[
+  {path:"",redirectTo:"home",pathMatch:"full"},
+  {path:"",component:Layout1Component,children:[
+    {path:"home",component:HomeComponent},
+    {path:"guitars",component:GuitarsComponent},
+    {path:"bass",component:BassComponent},
+    {path:"contact",component:ContactComponent},
+]},
+  {path:"**",redirectTo:"home"}
+];
+
+
+
+
+------------------------------------
+HEADER
+------------------------------------
+
+<div header>
+    <ul>
+        <a>
+            <li>Home</li>
+         </a>
+        <a>
+            <li>Guitars</li>
+         </a>
+        <a>
+            <li>Guitar1</li>
+         </a>
+        <a>
+            <li>Bass</li>
+         </a>
+        <a>
+            <li>Encargos</li>
+         </a>
+    </ul>
+</div>
+
+
+[header] ul {
+  background: gainsboro;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+li {
+  padding: 1rem;
+  list-style:none;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+.active {
+    border-bottom: 1px solid red;
+}
+
+
+------------------------------------
+------------------------------------
+
+
+
+------------------------------------
+PAGE
+------------------------------------
+
+<div page>
+  <p>Home Works</p>
+</div>
+
+
+------------------------------------
+------------------------------------
+
+
+------------------------------------
+FOOTER
+------------------------------------
+
+<div footer>
+  <p>Footer Works</p>
+</div>
+
+
+
+
+[footer] {
+    height:6rem;
+    background:rgb(28, 51, 3);
+    position:fixed;
+    bottom:0;
+    width:100%;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.5rem;
+    
+}
+
+------------------------------------
+------------------------------------
+
+------------------------------------
+FORM
+------------------------------------
+
+<div form>
+    <form>
+        <div>
+            <div class="c_Input">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" autocomplete="on">
+            </div>
+            <div class="c_Input">
+                <label for="telf">Telf</label>
+                <input type="tel" name="telf" id="telf" autocomplete="on">
+            </div>
+
+        </div>
+        <div class="c_Input">
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" id="fecha" autocomplete="on">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+
+[form] {
+    margin:2rem auto;
+    background:gainsboro;
+    padding:2rem;
+    
+}
+
+form {
+    // height:10rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-flow: column wrap;
+}
+.c_Input {
+    margin:1rem 0;
+
+}
+
+input {
+    padding:.5rem;
+    font-family:"Montserrat", sans-serif;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+button {
+    -webkit-appearance:none;
+    padding: 0.6rem 2.4rem;
+    color:white;
+    background:red;
+    border:none;
+    cursor:pointer;
+    margin:1rem auto;
+}
+
+
+label {
+    margin-right:1rem;
+}
+
+button:disabled {
+opacity:.3;
+cursor:not-allowed;
+}
+
+.card_Pers {
+     display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-flow: row wrap;
+    border: 1px solid rgb(216, 98, 98);
+    margin: 3rem 0;
+    border-radius: 6px;
+
+    > * {
+        // padding:2rem;
+        // height:2rem;
+        width:14rem;
+        padding: 2rem;
+        border: .5px solid white;
+        border-radius: 6px;
+        margin: 2rem;
+    }
+
+}
+
+.indicador {
+    background:magenta;
+    color:white;
+    display:inline-flex;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+    height:3rem;
+    margin: .5rem 0;
+}
+
+
+
+
+
+------------------------------------
+------------------------------------
+
+------------------------------------
+TYPESCRIPT - HTML5
+------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="./index.css">
+          <script type="module" src="./index.js" defer></script>
+</head>
+<body>
+    <h1>Application Typescript</h1>
+    
+</body>
+</html>
+
+------------------------------------
+------------------------------------
+
+------------------------------------
+MONGODB ATLAS
+------------------------------------
+
+
+mongodb+srv://admin:admin@cluster0-jsmjq.mongodb.net/test?retryWrites=true&w=majority
+mongodb+srv://louisreed:lademarras@cluster0-jsmjq.mongodb.net/test?retryWrites=true&w=majority
+
+
+------------------------------------
+------------------------------------
+
+------------------------------------
+MONGODB POSTGRES
+------------------------------------
+
+
+    username:"postgres",
+    host:"localhost",
+    database:"personas",
+    password:"admin",
+    port:5432,
+    type:"postgres",
+    entities:[join(__dirname,"/**/*.entity.{ts,js}")],
+    synchronize:true
+
+
+------------------------------------
+------------------------------------
+
+------------------------------------
+TYPESCRIPT - CSS
+------------------------------------
+
+
+:root {
+    font-size:70%;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat',
+    sans-serif;
+    background:purple;
+    padding:2rem;
+
+}
+h1 {
+    position:relative;
+    font-weight: 300;
+    text-align: center;
+    color:white;
+    cursor:pointer;
+
+}
+h1::after {
+    display:block;
+    content:"";
+    position:absolute;
+    bottom:-16px;
+    width:100%;
+    height:1px;
+    background:white;
+}
+
+NPM:
+
+    "ls":"lite-server",
+    "tsc":"tsc -w",
+    "start":"npm-run-all --parallel ls tsc"
+
+TSC
+
+      "DOM",
+      "DOM.Iterable", 
+      "ES6",
+      "ScriptHost"
+
+MODULES SCRIPTS:
+
+export const {log:l}=console;
+
+export class Person {
+    
+}
+
+------
+
+import { Person, l } from './index0.js';
+
+l("Application TypeScript");
+
+
+------------------------------------
+------------------------------------
+LOADING.IO  
+------------------------------------
+------------------------------------
+
+span {
+  content: "\2713";
+}
+
+<div class="lds-ripple"><div></div><div></div></div>
+
+
+
+.lds-ripple {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #fff;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+
+------------------------------------
+------------------------------------
+
+
+
+------------------------------------
+------------------------------------
+
+ReactiveFormValidator
+
+      nombre:new FormControl(null,[(c)=>this.validacion.call(this,c,5)]),
+
+  validacion(c:FormControl,num:number) {
+    l(c)
+
+
+      if (c.value === null || c.value.length < num) {
+        return { noestaPermitido: true };
+      } else {
+        return null;
+      }
+
+    } 	
+
+
+
+------------------------------------
+------------------------------------
+
+positivos de mayor resolucion (+ Grande) a menor resolución (+ Pequeño)
+
+font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+
+negativos de mayor resolucion (+ Prqueño) a menor resolución (+ Pequeño)
+
+font-size: calc(26px + (14 - 26) * ((100vw - 1600px) / (300 - 1600)));
+
+  line-height: calc(1.5em + (1.2 - 1.5) * ((100vw - 1600px)/(300 - 1600)));
+
+
+En %: Ejemplo
+
+
+calc(12% + (24 - 12) * ((100vw - 300px) / (1600 - 300)))
+
+
+---------------------
+---------------------
+
+QUITAR ARROWS por default en Select TAGS:
+
+select::-ms-expand {
+   display: none;
+}
+
+
+-------------------
+-------------------
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  /* IE10+ specific styles go here */  
+
+
+
+
+}  
+
+
+-------------------
+-------------------
+
+@supports (-ms-ime-align: auto) {
+
+        /* IEDEGE+ specific styles go here */
+    
+  }
+
+
+-----------------------------------
+-----------------------------------
+****Arreglar word-wrap en Mozilla
+
+*Colocar estas reglas en el primer div anterior:
+
+    word-break: break-all;
+    word-wrap: break-word;
+
+
+
+
+----------------------------
+------------------------------
+
+
+$(window).resize(function() {
+
+if (innerWidth>=771) {
+
+$("div.body-page span.remarkable").css({color:"red"})
+
+}
+
+else {
+
+$("div.body-page span.remarkable").css({color:"blue"})
+
+}
+
+
+
+
+
+
+
+})
+
+
+-----------------------------
+------------------------------
+
+.parent {
+  font-size: 250px; // height of container
+  height: 1em;
+}
+
+.child {
+  height: 100%;
+  width: 1em; // 100% of height
+}
+
+
+--------------------------------------
+--------------------------------------
+
+FLOW
+
+
+* > * + *, * > * {
+    padding-bottom: 8px !important;
+}
+
+
+----------------------------------------
+-----------------------------------------
+
+INTERSECTION OBSERVER
+
+function handler(entries, observer) {
+  for (entry of entries) {
+    console.log(entry);
+
+   
+
+    if (entry.isIntersecting) {
+      console.log('Estoy entrando!!!')
+    } else {
+      console.log('Estoy saliendo!!!')
+    }
+  }
+}
+
+/* By default, invokes the handler whenever:
+   1. Any part of the target enters the viewport
+   2. The last part of the target leaves the viewport */
+
+var observer1 = new IntersectionObserver(handler);
+observer1.observe(document.getElementById("bloqueHome02DerTitulo"));
+
+-------------------------------------
+-------------------------------------
+
+VIDEOS RESPONSIVE
+
+.contenedorVideo {
+    width: 100%;
+    height: 0px;
+    padding-bottom: 56.25%;
+    background: black;
+    position: relative;
+}
+
+YOUTUBE IFRAME
+
+iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+
+-----------------------------------------
+Script chivato de elemento overflow BODY.
+-----------------------------------------
+
+var docWidth = document.documentElement.offsetWidth;
+
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
+
+
+-----------------------------------------
+Script buscar texto que matches y añadirle clase en JQUERY.
+-----------------------------------------
+
+
+var diaHoy=new Date().getDate();
+
+
+
+
+	$('td').each(function(k,v){
+
+		var re = new RegExp("\\b"+diaHoy+"\\b","g");
+
+		if($(this).text().match(re)) {
+			// do something
+			$(this).addClass('hoy');
+
+		   
+		}
+	});
+
+
+-------------------------------------
+-------------------------------------
+
+
+/* ----------------------------------------
+INPUT RANGE UNSTYLED
+----------------------------------------- */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+  
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+  
+    /* Hides the slider so custom styles can be added */
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+/* ----------------------------------------
+INPUT RANGE UNSTYLED FIN
+----------------------------------------- */
+
+
+
+/* ----------------------------------------
+INPUT RANGE THUMB CUSTOM
+----------------------------------------- */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    // box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+  
+  /* All the same stuff for Firefox */
+  input[type=range]::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    margin-top: -6px;
+    border:none;
+  }
+  
+  /* All the same stuff for IE */
+  input[type=range]::-ms-thumb {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: red;
+    cursor: pointer;
+    margin-top: -6px;
+  }
+
+
+/* ----------------------------------------
+INPUT RANGE CUSTOM THUMB FIN
+----------------------------------------- */
+
+
+
+/* ----------------------------------------
+INPUT RANGE TRACK CUSTOM
+----------------------------------------- */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+   
+    background: #3071a9;
+    border-radius: 6px;
+    
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+   
+    background: #3071a9;
+    border-radius: 6px;
+    
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: transparent;
+    
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    
+   
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    
+   
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+  }
+
+
+/* ----------------------------------------
+INPUT RANGE TRACK FIN
+----------------------------------------- */
+
+
+
+-----------------------------------------------
+JAVASCRIPT INPUT RANGE CONSOLE JQUERY
+-----------------------------------------------
+
+$(document).on('input change', '#formControlRange', function() {
+    console.log( $(this).val() );
+});
+
+------------------------------------------------
+------------------------------------------------
+
+
+elemento::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height:20px;
+    background: white;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+}
+
+------------------------------------
+-----------------------------------------
+
+basic bootstrap import
+
+//Basico 2400 lineas
+@import 'scss/bootstrap-reboot.scss';
+@import 'scss/bootstrap-grid.scss';
+
+
+
+//Basico + spacing utilities  3700 lineas
+
+@import 'scss/bootstrap-reboot.scss';
+@import 'scss/bootstrap-grid.scss';
+@import 'scss/utilities/_spacing.scss';
+
+
+
+------------------------------------------
+------------------------------------------
+
+circulo de spans
+
+span.circle_Corporate {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #d7192d;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@font-face { font-family: 'Montserrat-Regular'; src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Regular.woff') format('woff'), url('../fonts/Montserrat-Regular.ttf') format('truetype'), url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg'); font-weight: normal; font-style: normal; } 
+
+@font-face { font-family: 'Montserrat-Bold'; src: url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Montserrat-Bold.woff') format('woff'), url('../fonts/Montserrat-Bold.ttf') format('truetype'), url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg'); font-weight: normal; font-style: normal; } 
+
+
+
+$Mr:'Montserrat-Regular', Arial, sans-serif;
+
+$Mb:'Montserrat-Bold', Arial, sans-serif;
+
+
+-------------------------------------------------
+--------------------------------------------------------
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+
+Tipical Media Queries
+
+
+----------------------------------
+-------------------------------------------
+
+import { Carrousel } from './../../sharedClasses/carrousel.class';
+
+
+let botones = document.querySelectorAll("#carrousel1 button");
+let botones2 = document.querySelectorAll("#carrousel2 button");
+
+let carrousel1 = new Carrousel(
+  [
+    "Guit1_Foto1_Comp20-1024x682.jpg",
+     "Guit1_Foto2_Comp20-1024x682.jpg"
+    ],
+  "./../../assets/images/Guitarras/Guitar_01/",
+  "#carrousel1"
+);
+
+botones[0].addEventListener("click", (e) =>
+  carrousel1.setClick.call(carrousel1, false)
+);
+botones[1].addEventListener("click", (e) =>
+  carrousel1.setClick.call(carrousel1, true)
+);
+
+        <div class="carrousel" id="carrousel1">
+          <img src="./../../assets/images/Guitarras/Guitar_01/Guit1_Foto1_Comp20-1024x682.jpg" alt="">
+          <img src="./../../assets/images/Guitarras/Guitar_01/Guit1_Foto2_Comp20-1024x682.jpg" alt="">
+          <button type="button" class="back">Atras</button>
+          <button type="button" class="forward">Adelante</button>
+        </div>
+
+
+
+----------------------------------
+-----------------------------------------
+
+echo -e '
+const express=require("express");\n
+const dotEnv=require("dotenv");\n
+const reload=require("reload");\n
+const http=require("http");\n
+const {log:l}=console;\n
+l("Hola!!!!");\n
+const app=express();\n
+dotEnv.config();\n
+const port=process.env.PORT;\n
+app.use(express.static("public"));\n
+app.use("/static",express.static("public"));\n
+const server=http.createServer(app);\n
+reload(app)
+.then(
+    server.listen(port,()=>{
+        l(`Server Listening on PORT: ${port} .............`)
+    })
+)
+.catch(e=>{
+    throw new Error(e)
+})
+' > src/app.ts
+
+
+    "tsc":"tsc -w",
+    "start":"npm-run-all --parallel _nd tsc"
+
+
+{
+  "name": "Express_10",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "bash ./expressTypescript.sh",
+    "borrar": "bash ./expressTypescriptBorrar.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "lo que me salga del pijo",
+  "description": ""
+}
+
+
