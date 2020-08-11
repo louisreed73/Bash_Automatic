@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+:root {
+    font-size:70%;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat',
+    sans-serif;
+}
+
+[page] {
+    padding:3rem;
+}
+
+li:active,
+li:focus {
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+
+}
+

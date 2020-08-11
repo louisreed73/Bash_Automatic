@@ -1,0 +1,35 @@
+:root {
+    font-size: 70%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat',
+        sans-serif;
+    background: rgb(19, 113, 201);
+}
+
+[page] {
+    padding: 3rem;
+}
+
+h1,h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.blue {
+    background: rgb(9, 85, 116);
+}
+
+.gold {
+    background: gold;
+}

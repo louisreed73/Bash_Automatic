@@ -1,0 +1,22 @@
+
+[header] ul {
+  background: gainsboro;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+li {
+  padding: 1rem;
+  list-style:none;
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+.active {
+    border-bottom: 1px solid red;
+}
