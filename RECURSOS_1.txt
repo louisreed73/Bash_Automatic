@@ -65,10 +65,19 @@ nest g module zapatilla && nest g controller zapatilla --no-spec && nest g servi
 
 ---------------------------------------
 ---------------------------------------
+---------------------------------------
+---------------------------------------
 
+// Renombrar archivos de paginas
 
-touch src/zapatilla/dtos/zapatilla.dto.ts && touch src/zapatilla/entities/zapatilla.entity.ts && touch src/zapatilla/repositories/zapatilla.repository.ts
+for i in `find -wholename '*/home*'`;do mv $i `echo $i | sed 's/home/nuevoNombre/g'`;done
 
+// Reemplazar strings dentro de las paginas
+
+for i in `find src -type f -name 'directives*'`;do sed -i 's/nuevoNombre/directives/g' $i;done
+
+---------------------------------------
+---------------------------------------
 ---------------------------------------
 ---------------------------------------
 
@@ -1359,3 +1368,7 @@ reload(app)
 }
 
 
+
+&lt;div&gt;&lt;/div&gt;
+
+&#123;&#123;&#125;&#125;
