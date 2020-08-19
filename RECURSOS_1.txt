@@ -72,9 +72,11 @@ nest g module zapatilla && nest g controller zapatilla --no-spec && nest g servi
 
 for i in `find -wholename '*/home*'`;do mv $i `echo $i | sed 's/home/nuevoNombre/g'`;done
 
+for i in `find -wholename '*/directives*'`;do mv $i `echo $i | sed 's/directives/components_data_Binding_deep/g'`;done
+
 // Reemplazar strings dentro de las paginas
 
-for i in `find src -type f -name 'directives*'`;do sed -i 's/nuevoNombre/directives/g' $i;done
+for i in `find src -type f -name 'directives*'`;do sed -i 's/directives/nuevoNombre/g' $i;done
 
 ---------------------------------------
 ---------------------------------------
@@ -82,6 +84,14 @@ for i in `find src -type f -name 'directives*'`;do sed -i 's/nuevoNombre/directi
 ---------------------------------------
 
 $ mkdir -p carp1 carp2/{carp_1,carp_2/{carp__1,carp__2},carp_3} carp3
+
+
+------------------------------------------
+------------------------------------------
+
+// Eliminar directorios desde uno en concreto recursivamente menos los nombrados:
+
+find ./nuevo -mindepth 1 -type d \( -name "archivos" -o -name "fotos" \) -prune -o -exec rm -r {} +
 
 ---------------------------------------
 ---------------------------------------
@@ -216,6 +226,34 @@ carpetas=(dtos entitites repositories)
 nombre=(dto entity repository)
 
 for i in ${!carpetas[*]};do touch src/boli/${carpetas[${i}]}/boli.${nombre[${i}]}.ts;done
+
+
+---------------------------------------
+---------------------------------------
+
+MULTER BASIC CONFIGURATION FILE
+
+const path=require("path");
+const multer=require("multer");
+
+const folderName=(fd)=>{
+    return multer({
+        fileFilter:(req,file,cb)=>{
+            const ext=path.extname(file.originalname);
+            if(
+                ext !== ".png" &&
+                ext !== ".jpg" &&
+                ext !== ".gif" &&
+                ext !== ".jpeg"
+            ) {
+                return cb(new Error("Only images are allowed!!"))
+            }
+            cb(null,true);
+        },
+        dest:`public/uploads/${fd}`
+    })
+}
+module.exports=folderName;
 
 
 ---------------------------------------
@@ -1372,3 +1410,5 @@ reload(app)
 &lt;div&gt;&lt;/div&gt;
 
 &#123;&#123;&#125;&#125;
+
+512386654?
