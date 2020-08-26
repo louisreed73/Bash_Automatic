@@ -83,6 +83,17 @@ for i in `find src -type f -name 'directives*'`;do sed -i 's/directives/nuevoNom
 ---------------------------------------
 ---------------------------------------
 
+Encuentra recursivamente la linea donde aparece background y substituye el grupo 1y2 por grupo 1 + red
+
+
+$ grep -lr background public | xargs sed -i 's/\(background:\)\(.*\)/\1    red/' public/css/estilo.css
+
+---------------------------------------
+---------------------------------------
+---------------------------------------
+---------------------------------------
+
+
 $ mkdir -p carp1 carp2/{carp_1,carp_2/{carp__1,carp__2},carp_3} carp3
 
 
