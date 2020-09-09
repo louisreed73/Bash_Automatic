@@ -266,6 +266,65 @@ const folderName=(fd)=>{
 }
 module.exports=folderName;
 
+---------------------------------------
+---------------------------------------
+Dependencias para configurar Webpack con babel:
+
+  "devDependencies": {
+    "@babel/core": "^7.11.6",   <-----------------------------  El Core
+    "@babel/preset-env": "^7.11.5",  <-----------------------------  El preset/env con todas las integraciones basicas
+    "babel-loader": "^8.1.0",        <-----------------------------  El loader de babel
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.2",
+    "file-loader": "^6.1.0",
+    "html-webpack-plugin": "^4.4.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",  <-----------------------------  Babel runtime
+    "core-js": "^3.6.5"           <-----------------------------  npm i -S core-js@3   Version 3!
+  }
+
+---------
+
+file .babelrc
+
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "usage",
+                "corejs": "3",
+                "targets": {
+                    "browsers": [
+                        "last 5 versions",
+                        "ie >=9"
+                    ]
+                }
+            }
+        ]
+    ],
+    "plugins":[
+    ]
+}
+
+---------
+
+webpack.config.js  agregación del loader de archivos JS
+
+      {
+        test:/\.js$/,
+        exclude:/node_modules/,
+        use:{
+          loader:"babel-loader"
+        }
+      }
 
 ---------------------------------------
 ---------------------------------------
