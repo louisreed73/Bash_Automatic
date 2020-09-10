@@ -1,4 +1,4 @@
-
+node
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 VECTORITCPSS: Lademarras1914
@@ -328,6 +328,38 @@ webpack.config.js  agregación del loader de archivos JS
 
 ---------------------------------------
 ---------------------------------------
+
+Uso de Alias en Babel, acortar paths en import,  en dos archivos:
+
+----------
+
+tsconfig.json:
+
+    "baseUrl": "./",               <----------------------------
+     "paths": {                     <----------------------------
+        "Indice/*": ["src/dir1/dir2/dir3/*"]   <----------------------------
+    },      
+
+
+----------
+
+webpack.config.js:
+
+  resolve: {
+    extensions: [".ts", ".js"],
+    alias:{		       				<----------------------------
+      Indice:path.resolve(__dirname,"src/dir1/dir2/dir3/")  <----------------------------
+    }
+  },
+
+
+Y ahora se pueden usar en los path de los imports:
+
+	import saludo from "Indice/indice_1"
+
+
+---------------------------------------
+----------------------------------------
 
 @font-face {
   font-family: 'Montserrat-Italic';
