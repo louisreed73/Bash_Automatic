@@ -316,7 +316,7 @@ file .babelrc
 
 ---------
 
-webpack.config.js  agregación del loader de archivos JS
+webpack.config.js  agregaciï¿½n del loader de archivos JS
 
       {
         test:/\.js$/,
@@ -407,6 +407,8 @@ red.
 orange.
 purple.
 yellow.
+magenta.
+cyan.
 
 ---------------------------------------
 ----------------------------------------
@@ -931,12 +933,12 @@ ReactiveFormValidator
 ------------------------------------
 ------------------------------------
 
-positivos de mayor resolucion (+ Grande) a menor resolución (+ Pequeño)
+positivos de mayor resolucion (+ Grande) a menor resoluciï¿½n (+ Pequeï¿½o)
 
 font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 
-negativos de mayor resolucion (+ Prqueño) a menor resolución (+ Pequeño)
+negativos de mayor resolucion (+ Prqueï¿½o) a menor resoluciï¿½n (+ Pequeï¿½o)
 
 font-size: calc(26px + (14 - 26) * ((100vw - 1600px) / (300 - 1600)));
 
@@ -1111,7 +1113,7 @@ var docWidth = document.documentElement.offsetWidth;
 
 
 -----------------------------------------
-Script buscar texto que matches y añadirle clase en JQUERY.
+Script buscar texto que matches y aï¿½adirle clase en JQUERY.
 -----------------------------------------
 
 
