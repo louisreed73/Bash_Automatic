@@ -393,6 +393,20 @@ Y ahora se pueden usar en los path de los imports:
     ]
 }
 
+---------------------------------------
+----------------------------------------
+
+console.log colors available:
+
+By default, the following colors are available:
+blue.
+brown.
+gray.
+green.
+red.
+orange.
+purple.
+yellow.
 
 ---------------------------------------
 ----------------------------------------
