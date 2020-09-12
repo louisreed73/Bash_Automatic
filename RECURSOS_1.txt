@@ -358,6 +358,42 @@ Y ahora se pueden usar en los path de los imports:
 	import saludo from "Indice/indice_1"
 
 
+
+---------------------------------------
+----------------------------------------
+
+.babelrc
+
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns": "usage",
+                "corejs": "3",
+                "targets": {
+                    "browsers": [
+                        "last 5 versions",
+                        "ie >=9"
+                    ]
+                }
+            }
+        ],
+        "@babel/preset-typescript"
+    ],
+    "plugins":[
+                [
+            "@babel/plugin-transform-typescript",
+            {
+                "allowDeclareFields":true
+            }
+        ],
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties",{"loose":true}]
+    ]
+}
+
+
 ---------------------------------------
 ----------------------------------------
 
